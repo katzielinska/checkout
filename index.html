@@ -1,0 +1,165 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundation for Sites</title>
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="https://use.typekit.net/dfk3lyg.css">
+
+
+  </head>
+  <body>
+    <div class="title-bar">
+    <div class="title-bar-center">
+      <span class="title-bar-title">SHOP LOGO</span>
+    </div>
+
+  </div>
+
+<ul class="accordion" data-accordion data-deep-link="true" data-update-history="true" data-deep-link-smudge="true" data-deep-link-smudge-delay="500" id="deeplinked-accordion">
+  <li class="accordion-item is-active" data-accordion-item>
+    <a href="#addresslink" class="accordion-title">1. Address</a>
+    <div class="accordion-content" data-tab-content id="addresslink">
+<p>Already have an account? <a>Sign in.</a></p>
+      <form data-abide novalidate action="#deeplink2">
+    <div class="grid-container">
+      <div class="grid-x grid-padding-x">
+        <div class="medium-6 cell">
+          <label>Full name
+            <input type="text" required>
+          </label>
+        </div>
+        <div class="medium-6 cell">
+          <label>Address
+            <input type="text" required>
+          </label>
+        </div>
+        <ul class="accordion" data-allow-all-closed="true" data-accordion>
+          <li class="accordion-item" data-accordion-item>
+              <!-- Accordion tab title -->
+              <a href="#" class="accordion-title">Add company information</a>
+
+              <!-- Accordion tab content: it would start in the open state due to using the `is-active` state class. -->
+              <div class="accordion-content" data-tab-content>
+                <div class="medium-6 cell">
+                  <label>Company name
+                    <input type="text">
+                  </label>
+                </div>
+                <div class="medium-6 cell">
+                  <label>CVR number
+                    <input type="text">
+                  </label>
+                </div>
+                <div class="medium-6 cell">
+                  <label> EAN number
+                    <input type="text">
+                  </label>
+                </div>
+              </div>
+            </li>
+        </ul>
+        <div class="medium-6 cell">
+          <label> ZIP Code
+            <input type="text" required>
+          </label>
+        </div>
+
+        <div class="medium-6 cell">
+          <label>City
+            <input type="text" required>
+          </label>
+        </div>
+        <div class="medium-6 cell">
+          <label>Email
+            <input type="text" required>
+          </label>
+        </div>
+        <div class="medium-6 cell">
+          <label>Phone number
+            <input type="number" >
+          </label>
+        </div>
+      </div>
+    </div>
+       <div data-abide-error class="alert callout" style="display: none;">
+<p><i class="fi-alert"></i> Enter required information.</p>
+</div>
+    <button class="expanded button" type="submit" value="Submit">CONTINUE</a>
+
+  </form>
+
+    </div>
+  </li>
+  <li class="accordion-item" data-accordion-item>
+    <a href="#deeplink2" class="accordion-title">2. Shipping method</a>
+    <div class="accordion-content" data-tab-content id="deeplink2">
+<form action="#deeplink3" data-abide novalidate>
+      <fieldset class="large-5 cell">
+      <input type="radio" name="" value="Pickup" id="pokemonRed" required><label for="pokemonRed">Pickup</label>
+      <input type="radio" name="" value="PostNord" id="pokemonBlue"><label for="pokemonBlue">PostNord</label>
+      <input type="radio" name="" value="GLS" id="pokemonYellow"><label for="pokemonYello">GLS</label>
+    </fieldset>
+    <div data-abide-error class="alert callout" style="display: none;">
+   <p><i class="fi-alert"></i> There are some errors in your form.</p>
+ </div>
+        <button class="expanded button" type="submit" value="Submit">CONTINUE</a>
+      </form>
+    </div>
+  </li>
+  <li class="accordion-item" data-accordion-item>
+    <a href="#deeplink3" class="accordion-title">3. Payment method</a>
+    <div class="accordion-content" data-tab-content id="deeplink3">
+      <form action="#deeplink4" data-abide novalidate>
+            <fieldset class="large-5 cell">
+            <input type="radio" name="" value="Pickup" id="pokemonRed" required><label for="pokemonRed">Pickup</label>
+            <input type="radio" name="" value="PostNord" id="pokemonBlue"><label for="pokemonBlue">PostNord</label>
+            <input type="radio" name="" value="GLS" id="pokemonYellow"><label for="pokemonYello">GLS</label>
+          </fieldset>
+          <div data-abide-error class="alert callout" style="display: none;">
+         <p><i class="fi-alert"></i> There are some errors in your form.</p>
+       </div>
+              <button class="expanded button" type="submit" value="Submit">CONTINUE</a>
+            </form>
+
+    </div>
+  </li>
+  <li class="accordion-item" data-accordion-item>
+    <a href="#deeplink4" class="accordion-title">4. Review order and pay</a>
+    <div class="accordion-content" data-tab-content id="deeplink4">
+      <input id="checkbox1" type="checkbox"><label for="checkbox1">Create an account to check-out faster next time</label>
+        <button class="expanded button" href="#">APPROVE ORDER AND PAY</a>
+    </div>
+  </li>
+
+</ul>
+
+<div class="card">
+  <h1>Order summary</h1>
+  <a>EDIT ORDER</a>
+<div class="card-section"
+    <h2>Golden ring</h2>
+    <p>QTY. 1</p>
+  </div>
+  <div class="card-section">
+<div>
+<p>Subtotal</p>
+<p>Including tax</p>
+<p>Estimated shipping</p>
+<p>Total</p>
+</div>
+</div>
+
+</div>
+-->
+
+
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/what-input/dist/what-input.js"></script>
+    <script src="node_modules/foundation-sites/dist/js/foundation.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
