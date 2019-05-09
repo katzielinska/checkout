@@ -66,18 +66,18 @@
 // ---------
 
 $global-font-size: 100%;
-$global-width: rem-calc(1200);
+$global-width: rem-calc(1115);
 $global-lineheight: 1.5;
 $foundation-palette: (
   primary: #1a1a1a,
   secondary: #767676,
-  success: #3adb76,
+  success: #7CB76F,
   warning: #ffae00,
-  alert: #cc4b37,
+  alert: #DB4437,
 );
 $light-gray: #e6e6e6;
 $medium-gray: #cacaca;
-$dark-gray: #8a8a8a;
+$dark-gray: #4c4c4c;
 $black: #1a1a1a;
 $white: #fefefe;
 $body-background: $white;
@@ -213,12 +213,14 @@ $stat-font-size: 2.5rem;
 // --------
 
 $abide-inputs: true;
-$abide-labels: true;
+$abide-labels: false;
 $input-background-invalid: get-color(alert);
-$form-label-color-invalid: get-color(alert);
+$form-label-color-invalid: $black;
 $input-error-color: get-color(alert);
-$input-error-font-size: rem-calc(12);
+$input-error-font-size: rem-calc(14);
 $input-error-font-weight: $global-weight-bold;
+$background:get-color(alert);
+$background-lighten:100%;
 
 // 7. Accordion
 // ------------
@@ -859,8 +861,8 @@ $xy-grid: true;
 $grid-container: $global-width;
 $grid-columns: 12;
 $grid-margin-gutters: (
-  small: 20px,
-  medium: 30px
+  small: 16px,
+  medium: 32px
 );
 $grid-padding-gutters: $grid-margin-gutters;
 $grid-container-padding: $grid-padding-gutters;

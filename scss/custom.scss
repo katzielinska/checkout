@@ -1,5 +1,97 @@
 .title-bar{
+  span{
   font-size: 2em;
-  text-align: center;
-  color:yellow;
+}
+}
+
+.accordion-item{
+  a{
+font-weight: bold;
+}
+button.continue{
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+}
+
+.callout.alert{
+  background-color: $alert-color;
+  border: none;
+  color:$white;
+  p{
+  font-size: 0,875rem;
+}
+}
+
+.order-summary{
+  .order{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+
+  }
+  .product{
+    display:flex;
+    align-items:flex-start;
+    img{
+      margin-right:1rem;
+    }
+  }
+h3{
+  font-size:1.5rem;
+  font-weight: bold;
+}
+p{
+  margin:0;
+  font-size: 14px;
+}
+.cell{
+  margin:1rem 0;
+}
+
+.grid-container{
+  margin: 1rem 2rem;
+}
+
+a{
+  font-size:14px;
+}
+img{
+  width:60px;
+}
+}
+
+[type='text'], [type='password'], [type='date'], [type='datetime'], [type='datetime-local'], [type='month'], [type='week'], [type='email'], [type='number'], [type='search'], [type='tel'], [type='time'], [type='url'], [type='color'], textarea {
+  height:3rem;
+
+}
+
+select{
+  height:3rem;
+
+}
+.input-group-label{
+  border: 0;
+}
+
+.content{
+  display:none;
+
+}
+.accordion-title{
+
+}
+.collapsed{
+  display:block;
+}
+
+.company-info{
+  padding-bottom:1rem;
+  color:$success-color;
+  font-weight: bold;
+}
+
+
+.active-accordion{
+  color:$black;
 }
