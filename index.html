@@ -1,198 +1,298 @@
 <!doctype html>
 <html class="no-js" lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop Checkout</title>
-    <link rel="stylesheet" href="css/app.css">
-    <link rel="stylesheet" href="css/custom.css">
-    <link rel="stylesheet" href="https://use.typekit.net/dfk3lyg.css">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop Checkout</title>
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="foundation-icons.css">
+  <link rel="stylesheet" href="https://use.typekit.net/dfk3lyg.css">
 
 
-  </head>
-  <body>
-    <div class="title-bar">
-      <span class="title-bar-title">SHOP LOGO</span>
-    </div>
-<div class="grid-container">
-<div class="grid-x grid-margin-x">
-<div class="cell large-6" id="foo">
-<ul class="accordion" data-accordion data-deep-link="true" data-update-history="true" data-deep-link-smudge="true" data-deep-link-smudge-delay="500" id="deeplinked-accordion">
+</head>
 
-  <li class="accordion-item is-active" data-accordion-item>
-    <a href="#addresslink" class="accordion-title">1. Address</a>
-    <div class="accordion-content" data-tab-content id="addresslink">
-    <div class="grid-container">
-        <p>Already have an account? <a>Sign in.</a></p>
-      <form data-abide novalidate action="#deeplink2">
+<body>
+  <div class="title-bar">
+    <span class="title-bar-title">SHOP LOGO</span>
+  </div>
+  <div class="grid-container">
+    <div class="grid-x grid-margin-x">
+      <div class="cell medium-6" id="foo">
+        <ul class="accordion" data-accordion data-deep-link="true" data-update-history="true" data-deep-link-smudge="true" data-deep-link-smudge-delay="500" id="deeplinked-accordion">
 
-      <div class="grid-x">
-        <div class="cell">
-          <label>Full name
-            <input type="text" required>
-          </label>
-        </div>
-        <div class="cell">
-          <label>Address
-            <input type="text" required>
-          </label>
-        </div>
-<div class="cell">
-        <button formaction="none" class="company-info">Add company information </button>
-          <div class="content">
-                <div class="cell">
-                  <label>Company name
-                    <input type="text">
+          <li class="accordion-item is-active" data-accordion-item>
+            <a href="#addresslink" class="accordion-title">1. Address</a>
+            <div class="accordion-content" data-tab-content id="addresslink">
+              <div class="grid-container">
+                <p>Already have an account? <a>Sign in.</a></p>
+                <form data-abide novalidate action="#deeplink2">
+
+                  <div class="grid-x">
+                    <div class="cell">
+                      <label>Full name<i class="fi-asterisk"></i>
+                        <input type="text" required>
+                        <span class="form-error">
+                        <i class="fi-alert"></i>  Full name is required.
+                        </span>
+                      </label>
+                    </div>
+                    <div class="cell">
+                      <label>Street<i class="fi-asterisk"></i>
+                        <input type="text" required>
+                        <span class="form-error">
+                          <i class="fi-alert"></i>Street name and number are required.
+                        </span>
+                      </label>
+                    </div>
+                    <div class="cell">
+                      <button formaction="none" class="company-info"><i class="fi-plus" ></i>Add company information</button>
+                      <div class="content">
+                        <div class="cell">
+                          <label>Company name
+                            <input type="text">
+                          </label>
+                        </div>
+                        <div class="cell">
+                          <label>CVR number
+                            <input type="number">
+                          </label>
+                        </div>
+                        <div class="cell">
+                          <label> EAN number
+                            <input type="number">
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="cell small-4">
+                      <label> ZIP code<i class="fi-asterisk"></i>
+                        <input type="number" required>
+                        <span class="form-error">
+                        <i class="fi-alert"></i>  ZIP code is required.
+                        </span>
+                      </label>
+                    </div>
+
+                    <div class="cell">
+                      <label>City<i class="fi-asterisk"></i>
+                        <input type="text" required>
+                        <span class="form-error">
+                        <i class="fi-alert"></i>  City is required.
+                        </span>
+                      </label>
+                    </div>
+                    <div class="cell">
+                      <label>Country<i class="fi-asterisk"></i>
+                        <select required>
+                          <option value=""></option>
+                          <option value="Denmark">Denmark</option>
+                          <option value="Norway">Norway</option>
+                          <option value="Sweden">Sweden</option>
+                          <span class="form-error">
+                          <i class="fi-alert"></i>  Choose a country of delivery.
+                          </span>
+
+
+                      </label>
+
+                      </select>
+                      </label>
+                    </div>
+
+                    <div class="cell">
+                      <label>Email<i class="fi-asterisk"></i>
+                          <span data-tooltip tabindex="1" title="We'll use your email to send a confirmation of your order after your purchase.">?</span>
+                        <input type="email" required>
+                        <span class="form-error">
+                        <i class="fi-alert"></i> Email is required.
+                        </span>
+
+                      </label>
+                    </div>
+
+                    <div class="cell small-6 input-group">
+                      <label>Phone number
+                        <div class="input-group">
+                          <span class="input-group-label">+45</span>
+                          <input class="input-group-field" type="tel">
+                        </div>
+                      </label>
+                    </div>
+
+                  </div>
+                  <div data-abide-error class="alert callout" style="display: none;">
+                    <p><i class="fi-alert"></i> Enter required information.</p>
+                  </div>
+                  <button class="expanded button continue" type="submit" value="Submit">CONTINUE</a>
+                </form>
+              </div>
+            </div>
+          </li>
+
+          <li class="accordion-item shipping-method" data-accordion-item>
+            <a href="#deeplink2" class="accordion-title">2. Shipping method</a>
+            <div class="accordion-content" data-tab-content id="deeplink2">
+              <form action="#deeplink3" data-abide novalidate>
+                <fieldset>
+                  <label for="pickup">
+                    <input class="card-input-element" type="radio" name="shippingMethod" value="Pickup" id="pickup" required>
+                    <div class="grid-x card-input">
+                      <div class="cell small-6">Pickup</div>
+                      <div class="cell small-6 text-right">
+                        0,00 DKK
+                      </div>
+                    </div>
                   </label>
+
+
+                  <label for="gls">
+                    <input class="card-input-element" type="radio" name="shippingMethod" value="GLS" id="gls">
+                    <div class="grid-x card-input">
+                      <div class="cell small-6">GLS</div>
+                      <div class="cell small-6 text-right">
+                        0,00 DKK
+                      </div>
+                    </div>
+                  </label>
+
+
+
+                  <label for="post">
+                    <input class="card-input-element" type="radio" name="shippingMethod" value="post" id="post">
+                    <div class="grid-x card-input">
+                      <div class="cell small-6">PostNord</div>
+                      <div class="cell small-6 text-right">
+                        0,00 DKK
+                      </div>
+                    </div>
+                  </label>
+                </fieldset>
+
+                <div data-abide-error class="alert callout" style="display: none;">
+                  <p><i class="fi-alert"></i> Choose a shipping method.</p>
                 </div>
-                <div class="cell">
-                  <label>CVR number
-                    <input type="number">
-                  </label>
+                <button class="expanded button continue" type="submit" value="Submit">CONTINUE</button>
+              </form>
+            </div>
+          </li>
+
+
+          <li class="accordion-item payment-method" data-accordion-item>
+            <a href="#deeplink3" class="accordion-title">3. Payment method</a>
+            <div class="accordion-content" data-tab-content id="deeplink3">
+              <form action="#deeplink4" data-abide novalidate>
+                <label for="dankort">
+                  <input class="card-input-element" type="radio" name="paymentMethod" value="Dankort" id="dankort" required>
+                  <div class="grid-x card-input">
+                    <div class="cell small-6">Dankort</div>
+                    <div class="cell small-6 text-right">
+                      <img>
+                    </div>
+                  </div>
+                </label>
+
+                <label for="bank-transfer">
+                  <input class="card-input-element" type="radio" name="paymentMethod" value="Bank Transfer" id="bank-transfer" required>
+                  <div class="grid-x card-input">
+                    <div class="cell small-6">Bank Transfer</div>
+                    <div class="cell small-6 text-right">
+                      <img>
+                    </div>
+                  </div>
+                </label>
+
+                <label for="paypal">
+                  <input class="card-input-element" type="radio" name="paymentMethod" value="PayPal" id="paypal" required>
+                  <div class="grid-x card-input">
+                    <div class="cell small-6">PayPal</div>
+                    <div class="cell small-6 text-right">
+                      <img>
+                    </div>
+                  </div>
+                </label>
+
+
+
+                <div data-abide-error class="alert callout" style="display: none;">
+                  <p><i class="fi-alert"></i> There are some errors in your form.</p>
                 </div>
-                <div class="cell">
-                  <label> EAN number
-                    <input type="number">
-                  </label>
+                <button class="expanded button continue" type="submit" value="Submit">CONTINUE</button>
+              </form>
+
+            </div>
+          </li>
+
+
+          <li class="accordion-item review-order" data-accordion-item>
+            <a href="#deeplink4" class="accordion-title">4. Review order and pay</a>
+            <div class="accordion-content" data-tab-content id="deeplink4">
+              <label class="create-account-label" for="create-account">
+                Create an account to check-out faster next time
+                <input id="create-account" type="checkbox">
+                <span class="checkbox">
+              </label>
+              <div class="cell create-password" style="display:none">
+                <label> Create password
+                  <input type="password" required>
+                </label>
+                <p class="help-text" id="create-password-helptext">The password should contain 8-16 characters, including at least one number and special character.</p>
+              </div>
+
+              <button class="expanded button continue" href="#">APPROVE ORDER AND PAY</a>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+      <div class="cell medium-6 right" data-sticky-container>
+        <div class="sticky" data-sticky data-anchor="foo">
+          <div class="card order-summary">
+            <div class="grid-container">
+              <div class="grid-x">
+                <div class="cell small-12 order">
+                  <h3>Order summary</h3>
+                  <a>EDIT ORDER &#8250;</a>
+                </div>
+                <div class="cell small-12 product">
+                  <img src="img/ring.png">
+                  <div>
+                    <strong>Golden ring</strong>
+                    <p>QTY. 1</p>
+                  </div>
+                </div>
+
+                <div class="cell small-6">
+
+
+                  <p>Subtotal</p>
+                  <p>Including tax</p>
+                  <p>Estimated shipping</p>
+                  <strong>Total</strong>
+                </div>
+                <div class="cell small-6 text-right">
+
+                  <p>300,00 DKK</p>
+                  <p>60,00 DKK</p>
+                  <p>0,00 DKK</p>
+                  <strong>300,00 DKK</strong>
+                </div>
               </div>
             </div>
           </div>
-
-        <div class="cell small-4">
-          <label> ZIP Code
-            <input type="number" required>
-          </label>
         </div>
-
-        <div class="cell">
-          <label>City
-            <input type="text" required>
-          </label>
-        </div>
-<div class="cell">
-        <label>Country
-  <select>
-    <option value="Denmark">Denmark</option>
-    <option value="Norway">Norway</option>
-    <option value="Sweden">Sweden</option>
-  </label>
-
-  </select>
-</label>
-</div>
-
-        <div class="cell">
-          <label>Email
-            <input type="email" required>
-          </label>
-        </div>
-
-        <div class="cell small-6 input-group">
-          <label >Phone number
-<div class="input-group">
-  <span class="input-group-label">+45</span>
-    <input class="input-group-field" type="tel">
+      </div>
+    </div>
   </div>
-</label>
-        </div>
+  </div>
 
-      </div>
-      <div data-abide-error class="alert callout" style="display: none;">
-        <p><i class="fi-alert"></i> Enter required information.</p>
-      </div>
-      <button class="expanded button continue" type="submit" value="Submit">CONTINUE</a>
-      </form>
-    </div>
-    </div>
-  </li>
-  <li class="accordion-item" data-accordion-item>
-    <a href="#deeplink2" class="accordion-title">2. Shipping method</a>
-    <div class="accordion-content" data-tab-content id="deeplink2">
-<form action="#deeplink3" data-abide novalidate>
-      <fieldset class="large-5 cell">
-      <input type="radio" name="" value="Pickup" id="pokemonRed" required><label for="pokemonRed">Pickup</label>
-      <input type="radio" name="" value="PostNord" id="pokemonBlue"><label for="pokemonBlue">PostNord</label>
-      <input type="radio" name="" value="GLS" id="pokemonYellow"><label for="pokemonYello">GLS</label>
-    </fieldset>
-    <div data-abide-error class="alert callout" style="display: none;">
-   <p><i class="fi-alert"></i> There are some errors in your form.</p>
- </div>
-        <button class="expanded button continue" type="submit" value="Submit">CONTINUE</a>
-      </form>
-    </div>
-  </li>
-  <li class="accordion-item" data-accordion-item>
-    <a href="#deeplink3" class="accordion-title">3. Payment method</a>
-    <div class="accordion-content" data-tab-content id="deeplink3">
-      <form action="#deeplink4" data-abide novalidate>
-            <fieldset class="large-5 cell">
-            <input type="radio" name="" value="Pickup" id="pokemonRed" required><label for="pokemonRed">Pickup</label>
-            <input type="radio" name="" value="PostNord" id="pokemonBlue"><label for="pokemonBlue">PostNord</label>
-            <input type="radio" name="" value="GLS" id="pokemonYellow"><label for="pokemonYello">GLS</label>
-          </fieldset>
-          <div data-abide-error class="alert callout" style="display: none;">
-         <p><i class="fi-alert"></i> There are some errors in your form.</p>
-       </div>
-              <button class="expanded button continue" type="submit" value="Submit">CONTINUE</button>
-            </form>
+  <script src="node_modules/jquery/dist/jquery.js"></script>
+  <script src="node_modules/what-input/dist/what-input.js"></script>
+  <script src="node_modules/foundation-sites/dist/js/foundation.js"></script>
+  <script src="js/app.js"></script>
+</body>
 
-    </div>
-  </li>
-  <li class="accordion-item" data-accordion-item>
-    <a href="#deeplink4" class="accordion-title">4. Review order and pay</a>
-    <div class="accordion-content" data-tab-content id="deeplink4">
-      <input id="checkbox1" type="checkbox"><label for="checkbox1">Create an account to check-out faster next time</label>
-        <button class="expanded button continue" href="#">APPROVE ORDER AND PAY</a>
-    </div>
-  </li>
-
-</ul>
-</div>
-<div class="cell large-6 right" data-sticky-container>
-  <div class="sticky" data-sticky data-anchor="foo">
-<div class="card order-summary">
-  <div class="grid-container">
-    <div class="grid-x">
-      <div class="cell small-12 order">
-  <h3>Order summary</h3>
-    <a>EDIT ORDER &#8250;</a>
-</div>
-<div class="cell small-12 product">
-  <img src="img/ring.png">
-    <div>
-      <strong>Golden ring</strong>
-      <p>QTY. 1</p>
-    </div>
-</div>
-
-  <div class="cell small-6">
-
-
-  <p>Subtotal</p>
-  <p>Including tax</p>
-  <p>Estimated shipping</p>
-  <strong>Total</strong>
-</div>
-  <div class="cell small-6 text-right">
-
-  <p>300,00 DKK</p>
-  <p>60,00 DKK</p>
-  <p>0,00 DKK</p>
-  <strong>300,00 DKK</strong>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-    <script src="node_modules/jquery/dist/jquery.js"></script>
-    <script src="node_modules/what-input/dist/what-input.js"></script>
-    <script src="node_modules/foundation-sites/dist/js/foundation.js"></script>
-    <script src="js/app.js"></script>
-  </body>
 </html>

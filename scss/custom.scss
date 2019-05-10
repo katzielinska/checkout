@@ -1,97 +1,205 @@
-.title-bar{
-  span{
-  font-size: 2em;
-}
-}
-
-.accordion-item{
-  a{
-font-weight: bold;
-}
-button.continue{
-  font-weight: bold;
-  letter-spacing: 2px;
-}
-}
-
-.callout.alert{
-  background-color: $alert-color;
-  border: none;
-  color:$white;
-  p{
-  font-size: 0,875rem;
-}
-}
-
-.order-summary{
-  .order{
-    display:flex;
-    align-items: center;
-    justify-content: space-between;
-
-  }
-  .product{
-    display:flex;
-    align-items:flex-start;
-    img{
-      margin-right:1rem;
+.title-bar {
+    span {
+        font-size: 2em;
     }
-  }
-h3{
-  font-size:1.5rem;
-  font-weight: bold;
 }
-p{
-  margin:0;
-  font-size: 14px;
+//Accordion buttons
+
+.accordion-item {
+    a {
+        font-weight: bold;
+    }
+
+    button.continue {
+        font-weight: bold;
+        letter-spacing: 2px;
+    }
 }
-.cell{
-  margin:1rem 0;
+//Error message
+
+.callout.alert {
+    background-color: $alert-color;
+    border: none;
+    color: $white;
+
+    p {
+        font-size: 0,875rem;
+    }
+}
+//Order summary
+
+.order-summary {
+    .order {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .product {
+        display: flex;
+        align-items: flex-start;
+
+        img {
+            margin-right: 1rem;
+        }
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+    p {
+        margin: 0;
+        font-size: 14px;
+    }
+
+    .cell {
+        margin: 1rem 0;
+    }
+
+    .grid-container {
+        margin: 1rem 2rem;
+    }
+
+    a {
+        font-size: 14px;
+    }
+
+    img {
+        width: 60px;
+    }
+}
+//Form
+
+[type='text'],
+[type='password'],
+[type='date'],
+[type='datetime'],
+[type='datetime-local'],
+[type='month'],
+[type='week'],
+[type='email'],
+[type='number'],
+[type='search'],
+[type='tel'],
+[type='time'],
+[type='url'],
+[type='color'],
+textarea {
+    height: 3rem;
 }
 
-.grid-container{
-  margin: 1rem 2rem;
+select {
+    height: 3rem;
 }
 
-a{
-  font-size:14px;
-}
-img{
-  width:60px;
-}
+.input-group-label {
+    border: 0;
 }
 
-[type='text'], [type='password'], [type='date'], [type='datetime'], [type='datetime-local'], [type='month'], [type='week'], [type='email'], [type='number'], [type='search'], [type='tel'], [type='time'], [type='url'], [type='color'], textarea {
-  height:3rem;
+.fi-asterisk{
+  font-size: 0.5rem;
+  color:$warning-color;
+position: absolute;
+left:2;
 
 }
 
-select{
-  height:3rem;
+//Add company information
 
-}
-.input-group-label{
-  border: 0;
+.content {
+    display: none;
 }
 
-.content{
-  display:none;
-
-}
-.accordion-title{
-
-}
-.collapsed{
-  display:block;
+.collapsed {
+    display: block;
 }
 
-.company-info{
-  padding-bottom:1rem;
-  color:$success-color;
-  font-weight: bold;
+.company-info {
+    padding-bottom: 1rem;
+    color: $success-color;
+    font-weight: bold;
 }
 
-
-.active-accordion{
-  color:$black;
+.active-accordion {
+    color: $black;
 }
+//Radio buttons as cards
+
+.payment-method,
+.shipping-method {
+    label {
+        font-size: 14px;
+    }
+
+    .card-input-element {
+        display: none;
+    }
+
+    .card-input {
+        border: 1px solid $light-gray;
+        padding: 1rem;
+        margin: 0 0 1rem;
+    }
+
+    .card-input:hover {
+        cursor: pointer;
+    }
+
+    .card-input-element:checked + .card-input {
+        box-shadow: 0 0 0.5px 1px $success-color;
+    }
+}
+
+.review-order {
+    .create-account-label {
+        cursor: pointer;
+        display: block;
+        position: relative;
+        padding-left: 1.5rem;
+        margin-bottom: 1rem;
+
+        .checkbox {
+            position: absolute;
+            top: 4px;
+            left: 0;
+            height: 1rem;
+            width: 1rem;
+            background-color: $light-gray;
+        }
+
+        .checkbox:after {
+            left: 6px;
+            top: 3px;
+            width: 4px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+
+        .checkbox:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+
+        input:checked ~ .checkbox {
+            background-color: $black;
+        }
+
+        input {
+            display: none;
+        }
+    }
+
+
+    label input:checked ~ .checkbox:after {
+        display: block;
+    }
+}
+
+//Account creation
