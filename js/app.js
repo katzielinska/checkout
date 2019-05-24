@@ -20,15 +20,3 @@ for (i = 0; i < coll.length; i++) {
 //   event.preventDefault();
 // });
 // }
-
-
-function showPassword() {
-var checkbox = document.getElementById("create-account").checked;
-  if (checkbox) {
-    document.getElementsByClassName("create-password").style.display = "block";
-  } else {
-    document.getElementsByClassName("create-password").style.display = "none";
-  }
-}
-
-document.getElementById("create-account").onclick = showPassword;
